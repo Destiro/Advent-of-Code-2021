@@ -1,13 +1,14 @@
 fun main() {
     fun part1(input: List<String>): Int {
-        var decCount: Int = 0
-        var prevLine: String = input.get(0)
+        var incCount: Int = 0
+        var prevLine: Int = input.get(0).toInt()
         for (line in input){
-            if(line > prevLine){
-                decCount ++
+            if(line.toInt() > prevLine){
+                incCount ++
             }
+            prevLine = line.toInt()
         }
-        return decCount
+        return incCount
     }
 
     fun part2(input: List<String>): Int {
